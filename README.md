@@ -1,4 +1,4 @@
-🌿 Deforestation Detection Using Satellite Imagery
+# 🌿 Deforestation Detection Using Satellite Imagery
 
 A machine learning project leveraging U-Net for semantic segmentation to identify deforestation from satellite imagery.
 Project Overview
