@@ -5,85 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌿 Deforestation Detection Using Satellite Imagery</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8;
-            color: #334155;
-            line-height: 1.6;
+            background-color: #eef2f6; /* Lighter, softer background */
+            color: #374151; /* Darker text for better contrast */
+            line-height: 1.7; /* Improved line spacing */
+            padding: 1.5rem; /* More overall padding */
         }
         .container {
             max-width: 960px;
             margin: 2rem auto;
-            padding: 2rem;
+            padding: 2.5rem; /* Increased padding */
             background-color: #ffffff;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 1rem; /* More rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Stronger, softer shadow */
+            border: 1px solid #e5e7eb; /* Subtle border */
         }
         h1, h2, h3, h4 {
-            color: #1e293b;
-            font-weight: 700;
+            color: #1f2937; /* Even darker for headings */
+            font-weight: 800; /* Extra bold for impact */
         }
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.8rem; /* Larger title */
+            margin-bottom: 1.8rem;
             text-align: center;
+            color: #1d4ed8; /* A more vibrant blue */
+            letter-spacing: -0.025em; /* Slightly tighter letter spacing */
         }
         h2 {
-            font-size: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
+            font-size: 2.2rem; /* Larger subheadings */
+            margin-top: 2.5rem; /* More space above */
+            margin-bottom: 1.2rem;
+            border-bottom: 3px solid #bfdbfe; /* Thicker, lighter blue border */
+            padding-bottom: 0.75rem;
+            color: #2563eb; /* A slightly darker blue for h2 */
         }
         h3 {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.7rem; /* Larger h3 */
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #3b82f6; /* Blue for h3 */
+        }
+        p {
+            margin-bottom: 1.2rem; /* More space between paragraphs */
         }
         code {
-            background-color: #e2e8f0;
-            padding: 0.2em 0.4em;
-            border-radius: 0.25rem;
+            background-color: #e0e7ff; /* Lighter blue background for inline code */
+            color: #4338ca; /* Darker blue text for inline code */
+            padding: 0.25em 0.5em;
+            border-radius: 0.375rem; /* More rounded */
             font-family: 'Fira Code', 'Cascadia Code', monospace;
-            font-size: 0.9em;
+            font-size: 0.95em;
+            font-weight: 600;
         }
         pre {
-            background-color: #1a202c;
+            background-color: #1e293b; /* Darker background for code blocks */
             color: #e2e8f0;
-            padding: 1rem;
-            border-radius: 0.5rem;
+            padding: 1.5rem; /* More padding */
+            border-radius: 0.75rem; /* More rounded */
             overflow-x: auto;
             font-family: 'Fira Code', 'Cascadia Code', monospace;
             font-size: 0.9em;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem; /* More space below */
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
         }
         a {
-            color: #3b82f6;
+            color: #2563eb; /* Stronger link color */
             text-decoration: none;
+            transition: color 0.2s ease-in-out; /* Smooth transition on hover */
         }
         a:hover {
+            color: #1d4ed8; /* Darker blue on hover */
             text-decoration: underline;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
+        ul, ol {
+            margin-left: 2rem; /* Increased indent */
+            margin-bottom: 1.5rem;
         }
-        ol {
-            list-style-type: decimal;
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
+        li {
+            margin-bottom: 0.5rem; /* Space between list items */
         }
         .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
+            display: inline-flex; /* Use flex for centering icon/text if needed */
+            align-items: center;
+            padding: 0.4rem 1rem; /* More padding */
             border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 0.9rem; /* Slightly larger font */
+            font-weight: 700; /* Bolder text */
+            margin-right: 0.6rem;
+            margin-bottom: 0.6rem;
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 0.05em; /* Slightly spaced out letters */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for badges */
+            transition: transform 0.2s ease-in-out; /* Hover effect */
+        }
+        .badge:hover {
+            transform: translateY(-2px); /* Lift effect on hover */
         }
         .badge-python { background-color: #3b82f6; color: white; }
         .badge-pytorch { background-color: #ef4444; color: white; }
@@ -91,7 +110,8 @@
         .badge-ml { background-color: #8b5cf6; color: white; }
         .header-icon {
             vertical-align: middle;
-            margin-right: 0.5rem;
+            margin-right: 0.75rem; /* More space for icon */
+            font-size: 1.2em; /* Larger icon */
         }
     </style>
 </head>
@@ -101,11 +121,11 @@
             <span class="header-icon">🌿</span> Deforestation Detection Using Satellite Imagery
         </h1>
 
-        <p class="text-center text-lg text-gray-600 mb-8">
+        <p class="text-center text-xl text-gray-700 mb-10">
             A machine learning project leveraging U-Net for semantic segmentation to identify deforestation from satellite imagery.
         </p>
 
-        <div class="flex flex-wrap justify-center mb-8">
+        <div class="flex flex-wrap justify-center mb-10">
             <span class="badge badge-python">Python</span>
             <span class="badge badge-pytorch">PyTorch</span>
             <span class="badge badge-gis">GIS</span>
@@ -229,7 +249,8 @@ data_root_dir = r"C:/Users/Maverick/Downloads/GFC_Files" # &lt;-- Update this pa
             Contributions are welcome! If you have suggestions for improvements, new features, or bug fixes, please open an issue or submit a pull request.
         </p>
 
-       
+        
+        </p>
     </div>
 </body>
 </html>
