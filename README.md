@@ -47,15 +47,6 @@ Project Structure
 
 The main logic is contained within the provided Jupyter Notebook:
 
-.
-├── Deforestation_Detection_Using_Satellite_Imagery.ipynb
-└── GFC_Files/
-    ├── Hansen_GFC-2019-v1.7_first_30N_070E.tif
-    ├── Hansen_GFC-2019-v1.7_last_30N_070E.tif
-    ├── Hansen_GFC-2019-v1.7_lossyear_30N_070E.tif
-    ├── Hansen_GFC-2019-v1.7_treecover2000_30N_070E.tif
-    └── ... (other .tif files)
-
 Note: You will need to create the GFC_Files directory and place your downloaded satellite imagery data inside it.
 Configuration
 
