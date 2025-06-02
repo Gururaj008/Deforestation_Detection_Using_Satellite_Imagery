@@ -22,8 +22,8 @@ Features
 
     Threshold Experimentation: Ability to evaluate U-Net model performance across various prediction thresholds.
 
-Getting Started
-Prerequisites
+## Getting Started
+ Prerequisites
 
 Before running the code, ensure you have the following installed:
 
@@ -63,10 +63,10 @@ Open the Deforestation_Detection_Using_Satellite_Imagery.ipynb notebook.
 
 Update the file_path and data_root_dir variables:
 
-# For initial evaluation function
+## For initial evaluation function
 file_path = r"C:/Users/Maverick/Downloads/GFC_Files" # <-- Update this path
 
-# For U-Net training and evaluation
+## For U-Net training and evaluation
 data_root_dir = r"C:/Users/Maverick/Downloads/GFC_Files" # <-- Update this path
 
 Ensure these paths correctly point to the directory where you have stored your .tif files.
@@ -96,7 +96,7 @@ Execute the cells in the Jupyter Notebook sequentially:
 
     Run U-Net Model-Based Evaluation: Loads the trained model and evaluates its performance across various prediction thresholds, printing detailed metrics for each.
 
-Results & Metrics
+## Results & Metrics
 
 The notebook will output various metrics at different stages:
 
@@ -106,7 +106,7 @@ The notebook will output various metrics at different stages:
 
     U-Net Model Evaluation: Shows aggregated TP, FP, TN, FN counts, and calculated Accuracy, Precision, Recall, and F1-Score for the U-Net model at different prediction thresholds. This helps in understanding the model's performance trade-offs.
 
-Contributing
+## Contributing
 
 Contributions are welcome! If you have suggestions for improvements, new features, or bug fixes, please open an issue or submit a pull request.
 License
